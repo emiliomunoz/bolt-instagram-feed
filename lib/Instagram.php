@@ -33,6 +33,8 @@ class Instagram
      */
     protected $client;
 
+    protected $config;
+
     /**
      * Create a new instagram instance.
      *
@@ -44,6 +46,7 @@ class Instagram
     {
         $this->accessToken = $accessToken;
         $this->client = $client ?: new Client();
+        $this->config = $this->getConfig();
     }
 
     /**
@@ -57,10 +60,11 @@ class Instagram
      */
     public function media($params = null): array
     {
-        $url = sprintf('https://api.instagram.com/v1/users/self/media/recent/?access_token=%s', $this->accessToken);
+        $params = !is_null($params) ? http_build_query($params) : "";
+        $url = sprintf('https://api.instagram.com/v1/users/self/media/recent/?access_token=%s&%s', $this->accessToken, $params);
 
         $response = $this->client->get($url);
-        $body = json_decode((string) $response->getBody());
+        $body = json_decode((string) $response->getBody(), true);
         if (isset($body->error_message)) {
             throw new InstagramException($body->error_message);
         }
@@ -70,6 +74,6 @@ class Instagram
         if ($response->getStatusCode() !== 200) {
             throw new InstagramException($response->getReasonPhrase());
         }
-        return $body;
+        return $body["data"];
     }
 }

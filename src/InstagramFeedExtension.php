@@ -23,17 +23,16 @@ class InstagramFeedExtension extends SimpleExtension
     }
 
     /**
-     * @param $accessToken
-     * @param null $count
+     * @param string $accessToken
+     * @param array $params
      * @return array
      */
-    public function instagramTwigFunction($accessToken, $count = null)
+    public function instagramTwigFunction(string $accessToken, array $params = null)
     {
         // Create a new instagram instance.
         $instagram = new Instagram($accessToken);
 //
 //        // Fetch the media feed.
-        $params = !is_null($count) ? ["count" => $count] : [];
         $data = $instagram->media($params);
         return $data;
     }
