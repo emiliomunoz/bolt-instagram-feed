@@ -3,6 +3,7 @@
 namespace Bolt\Extension\emiliomunoz\InstagramFeed;
 
 use Bolt\Extension\SimpleExtension;
+use Vinkla\Instagram\Instagram;
 
 /**
  * InstagramFeed extension class.
@@ -23,16 +24,17 @@ class InstagramFeedExtension extends SimpleExtension
 
     /**
      * @param $accessToken
+     * @param null $count
      * @return array
      */
     public function instagramTwigFunction($accessToken, $count = null)
     {
         // Create a new instagram instance.
-//        $instagram = new Instagram($accessToken);
+        $instagram = new Instagram($accessToken);
 //
 //        // Fetch the media feed.
-//        $data = $instagram->media(array("count"=>9));
-//        return $data;
-        return array("a", "b", "c");
+        $params = !is_null($count) ? ["count" => $count] : [];
+        $data = $instagram->media($params);
+        return $data;
     }
 }
