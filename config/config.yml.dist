@@ -1,1 +1,3 @@
 access_token: YOUR_ACCESS_TOKEN
+cache_enabled: true
+cache_ttl: 3600  #How much time (seconds) the instagram data is valid
