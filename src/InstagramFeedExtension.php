@@ -25,7 +25,7 @@ class InstagramFeedExtension extends SimpleExtension
      * @param $accessToken
      * @return array
      */
-    public function instagramTwigFunction($accessToken)
+    public function instagramTwigFunction($accessToken, $count = null)
     {
         // Create a new instagram instance.
 //        $instagram = new Instagram($accessToken);

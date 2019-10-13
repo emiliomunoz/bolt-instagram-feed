@@ -21,7 +21,8 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\emiliomunoz\\InstagramFeed\\": "src"
+            "Bolt\\Extension\\emiliomunoz\\InstagramFeed\\": "src",
+            "Vinkla\\Instagram\\": "lib"
         }
     },
     "autoload-dev": {
