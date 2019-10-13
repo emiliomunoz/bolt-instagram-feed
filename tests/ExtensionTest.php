@@ -1,27 +1,27 @@
 <?php
 
-namespace Bolt\Extension\YourName\ExtensionName\Tests;
+namespace Bolt\Extension\emiliomunoz\InstagramFeed\Tests;
 
 use Bolt\Tests\BoltUnitTest;
-use Bolt\Extension\YourName\ExtensionName\ExtensionNameExtension;
+use Bolt\Extension\emiliomunoz\InstagramFeed\InstagramFeedExtension;
 
 /**
- * ExtensionName testing class.
+ * instagramFeed testing class.
  *
- * @author Your Name <you@example.com>
+ * @author Emilio Muñoz Monge <emiliomunozmonge@gmail.com>
  */
 class ExtensionTest extends BoltUnitTest
 {
     /**
-     * Ensure that the ExtensionName extension loads correctly.
+     * Ensure that the InstagramFeed extension loads correctly.
      */
     public function testExtensionBasics()
     {
         $app = $this->getApp(false);
-        $extension = new ExtensionNameExtension($app);
+        $extension = new InstagramFeedExtension($app);
 
         $name = $extension->getName();
-        $this->assertSame($name, 'ExtensionName');
+        $this->assertSame($name, 'InstagramFeed');
         $this->assertInstanceOf('\Bolt\Extension\ExtensionInterface', $extension);
     }
 

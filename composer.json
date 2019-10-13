@@ -1,6 +1,6 @@
 {
     "name": "emiliomunoz/instagram-feed",
-    "description": "",
+    "description": "Esta es la descripcion",
     "type": "bolt-extension",
     "keywords": [
     ],
@@ -13,25 +13,25 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "",
-            "email": "you@example.com"
+            "name": "Emilio Muñoz Monge",
+            "email": "emiliomunozmonge@gmail.com"
         }
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\YourName\\ExtensionName\\": "src"
+            "Bolt\\Extension\\emiliomunoz\\InstagramFeed\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bolt\\Extension\\YourName\\ExtensionName\\Tests\\": "tests",
+            "Bolt\\Extension\\emiliomunoz\\InstagramFeed\\Tests\\": "tests",
             "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
         }
     },
     "extra": {
         "bolt-assets": "web",
-        "bolt-class": "Bolt\\Extension\\YourName\\ExtensionName\\ExtensionNameExtension"
+        "bolt-class": "Bolt\\Extension\\emiliomunoz\\InstagramFeed\\InstagramFeedExtension"
     }
 }
