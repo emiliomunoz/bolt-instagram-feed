@@ -33,8 +33,6 @@ class Instagram
      */
     protected $client;
 
-    protected $config;
-
     /**
      * Create a new instagram instance.
      *
@@ -46,7 +44,6 @@ class Instagram
     {
         $this->accessToken = $accessToken;
         $this->client = $client ?: new Client();
-        $this->config = $this->getConfig();
     }
 
     /**

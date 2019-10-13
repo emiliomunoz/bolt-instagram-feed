@@ -23,16 +23,14 @@ class InstagramFeedExtension extends SimpleExtension
     }
 
     /**
-     * @param string $accessToken
      * @param array $params
      * @return array
      */
-    public function instagramTwigFunction(string $accessToken, array $params = null)
+    public function instagramTwigFunction(array $params = null)
     {
-        // Create a new instagram instance.
+        $accessToken = $this->getConfig()["access_token"];
         $instagram = new Instagram($accessToken);
-//
-//        // Fetch the media feed.
+
         $data = $instagram->media($params);
         return $data;
     }
