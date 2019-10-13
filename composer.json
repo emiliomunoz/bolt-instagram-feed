@@ -5,17 +5,10 @@
     "keywords": [
     ],
     "require": {
-        "bolt/bolt": "^3.0",
-        "php-http/client-implementation": "^1.0",
-        "php-http/discovery": "^1.4",
-        "php-http/httplug": "^1.1 || ^2.0",
-        "php-http/message-factory": "^1.0"
+        "bolt/bolt": "^3.0"
     },
     "require-dev": {
-        "php-http/guzzle6-adapter": "^2.0",
-        "php-http/message": "^1.7",
-        "php-http/mock-client": "^1.1",
-        "phpunit/phpunit": "^8.0"
+        "phpunit/phpunit": "^4.7"
     },
     "license": "MIT",
     "authors": [
