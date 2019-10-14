@@ -1,10 +1,14 @@
 {
     "name": "emiliomunoz/instagram-feed",
-    "description": "Esta es la descripcion",
+    "description": "This BoltCMS extension allows you to get raw feed data from Instagram's public API using the Access Token.",
     "type": "bolt-extension",
     "keywords": [
+        "instagram",
+        "social",
+        "feed"
     ],
     "require": {
+        "php": ">=7.0",
         "bolt/bolt": "^3.0"
     },
     "require-dev": {
